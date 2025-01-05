@@ -1,0 +1,75 @@
+# Language Configuration
+language: english
+
+# Code Preferences
+code:
+  primary_language: kotlin
+  secondary_language: java
+
+# Formatting Rules
+formatting:
+  indent_style: space
+  indent_size: 4
+  end_of_line: lf
+  insert_final_newline: true
+  trim_trailing_whitespace: true
+  max_line_length: off
+
+# Kotlin Specific
+kotlin:
+  code_style:
+    # Naming conventions
+    class_naming_convention: PascalCase
+    function_naming_convention: camelCase
+    property_naming_convention: camelCase
+    constant_naming_convention: SCREAMING_SNAKE_CASE
+
+  # Kotlin compiler settings
+  compiler:
+    jvm_target: 17
+    api_version: 1.9
+    language_version: 1.9
+
+# Android Specific
+android:
+  min_sdk: 24
+  target_sdk: 34
+  compile_sdk: 34
+
+# Exclusions
+exclude:
+  patterns:
+    # Android specific
+    - .gradle/
+    - .idea/
+    - build/
+    - app/build/
+    - captures/
+    - local.properties
+    
+    # General
+    - .git/
+    - "*.log"
+    - "*.lock"
+    - .DS_Store
+    
+    # Android generated files
+    - "*.apk"
+    - "*.aab"
+    - "*.aar"
+    - "*.ap_"
+    - "*.dex"
+    
+    # Proguard
+    - proguard/
+    - "*.pro"
+    - "*.txt"
+    
+    # Keystore files
+    - "*.jks"
+    - "*.keystore"
+    
+    # Test reports
+    - test-results/
+    - reports/
+    - coverage/
